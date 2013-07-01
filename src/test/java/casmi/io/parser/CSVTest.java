@@ -25,13 +25,11 @@ import java.io.IOException;
 
 import org.junit.Test;
 
-import casmi.io.parser.CSV;
-
 public class CSVTest {
 
-    private static final String EXAMPLE_CSV = CSVTest.class.getResource("example.csv").getPath();
-    private static final String WRITE_EXAMPLE_CSV = CSVTest.class.getResource("write_example.csv").getPath();
-    
+    private static final String EXAMPLE_CSV = CSVTest.class.getResource("/casmi/parser/example.csv").getPath();
+    private static final String WRITE_EXAMPLE_CSV = CSVTest.class.getResource("/casmi/parser/write_example.csv").getPath();
+
     @Test
     public void readLineTest() {
 

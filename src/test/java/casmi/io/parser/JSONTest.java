@@ -8,25 +8,23 @@ import java.io.IOException;
 import org.junit.Test;
 
 import casmi.io.exception.ParserException;
-import casmi.io.parser.JSON;
-import casmi.io.parser.XML;
 
 /**
  * JSON test class.
- * 
+ *
  * @author T. Takeuchi
- * 
+ *
  */
 public class JSONTest {
 
-    private static final String EXAMPLE_XML = JSONTest.class.getResource("example.xml").getPath();
-    private static final String EXAMPLE_JSON = JSONTest.class.getResource("example.json").getPath();
-    
+    private static final String EXAMPLE_XML = JSONTest.class.getResource("/casmi/parser/example.xml").getPath();
+    private static final String EXAMPLE_JSON = JSONTest.class.getResource("/casmi/parser/example.json").getPath();
+
     /**
      * Inner class for JSON tests.
-     * 
+     *
      * @author T. Takeuchi
-     * 
+     *
      */
     public class Sake {
         public String name;

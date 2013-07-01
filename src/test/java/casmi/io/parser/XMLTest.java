@@ -16,7 +16,7 @@
  *  You should have received a copy of the GNU Lesser General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-  
+
 package casmi.io.parser;
 
 import static org.junit.Assert.fail;
@@ -27,14 +27,12 @@ import java.io.IOException;
 import org.junit.Test;
 
 import casmi.io.exception.ParserException;
-import casmi.io.parser.XML;
-import casmi.io.parser.XMLElement;
 
 public class XMLTest {
 
-    private static final String EXAMPLE_XML = XMLTest.class.getResource("example.xml").getPath();
-    private static final String WRITE_EXAMPLE_XML = XMLTest.class.getResource("write_example.xml").getPath();
-    
+    private static final String EXAMPLE_XML = XMLTest.class.getResource("/casmi/parser/example.xml").getPath();
+    private static final String WRITE_EXAMPLE_XML = XMLTest.class.getResource("/casmi/parser/write_example.xml").getPath();
+
     @Test
     public void simpleReadTest() {
         XML xml = new XML();
@@ -116,12 +114,12 @@ public class XMLTest {
         xml.setName("alcohoric");
 
         XMLElement sake = new XMLElement("sake");
-        
+
         XMLElement urakasumi = new XMLElement("urakasumi", "UraKasumi");
         urakasumi.addAttribute("origin", "Miyagi");
         urakasumi.addAttribute("abv", "15");
         sake.addChild(urakasumi);
-        
+
         xml.addChild(sake);
 
         try {
